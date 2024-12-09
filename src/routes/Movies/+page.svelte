@@ -11,10 +11,10 @@
   </div>
 </div>
 
-<!-- Irgendwie funktioniert das nicht, ich habe keine Ahnung warum.
+
 <div class="container text-left">
       <div class="row">
-        {#each Movies as movie}
+        {#each data.movies as movie}
           <div class="col-md-3 mb-4">
               <div class="card bg-dark text-light shadow" >
               <img src={movie.Poster} class="card-img-top" alt={movie.Title} />
@@ -30,7 +30,6 @@
         {/each}
       </div>
     </div>
-    -->
 
     <style>
       .container {
