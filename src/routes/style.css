@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(116, 116, 116);
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  cointainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
