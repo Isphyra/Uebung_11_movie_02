@@ -7,7 +7,7 @@
     <h1>{data.movie.Title}</h1>
     <div class="row">
         <div class="col-md-4">
-            <img src={data.movie.Poster} alt={data.movie.Title} class="img-fluid" />
+            <img src={data.movie.poster} alt={data.movie.Title} class="img-fluid" />
         </div>
         <div class="col-md-8">
             <p>Jahr: {data.movie.Year}</p>

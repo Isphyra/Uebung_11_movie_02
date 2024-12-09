@@ -11,13 +11,12 @@
   </div>
 </div>
 
-
 <div class="container text-left">
       <div class="row">
         {#each data.movies as movie}
           <div class="col-md-3 mb-4">
               <div class="card bg-dark text-light shadow" >
-              <img src={movie.Poster} class="card-img-top" alt={movie.Title} />
+              <img src={movie.poster} class="card-img-top" alt={movie.Title} />
               <div class="card-body">
                 <h5>
                   <a href={`/movies/${movie._id}`} class="card-title">{movie.Title}</a>

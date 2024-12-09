@@ -14,7 +14,7 @@ const db = client.db("ScreenStackDB"); // select database
 async function getMovies() {
   let movies = [];
   try {
-    const collection = db.collection("Movies");
+    const collection = db.collection("movies");
 
     // You can specify a query/filter here
     // See https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/query-document/
