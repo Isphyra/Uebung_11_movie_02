@@ -3,18 +3,18 @@
 </script>
 
 <div class="container mt-4">
-    <a href="/Movies">Back</a>
-    <h1>{data.movie.Title}</h1>
+    <a href="/movies" class="btn btn-link text-light mb-4">Back</a>
+    <h1>{data.movie.title}</h1>
     <div class="row">
         <div class="col-md-4">
-            <img src={data.movie.poster} alt={data.movie.Title} class="img-fluid" />
+            <img src={data.movie.poster} alt={data.movie.title} class="img-fluid" />
         </div>
         <div class="col-md-8">
-            <p>Jahr: {data.movie.Year}</p>
-            <p>Dauer: {data.movie.Duration}</p>
-            <p>Actors:</p>
+            <p>Jahr: {data.movie.year}</p>
+            <p>Dauer: {data.movie.duration}</p>
+            <p><b>Actors:</b></p>
             <ul>
-                {#each data.movie.Actors as actor}
+                {#each data.movie.actors as actor}
                     <li>{actor}</li>
                 {/each}
             </ul>

@@ -36,7 +36,7 @@ async function getMovies() {
 async function getMovie(id) {
   let movie = null;
   try {
-    const collection = db.collection("Movies");
+    const collection = db.collection("movies");
     const query = { _id: new ObjectId(id) }; // filter by id
     movie = await collection.findOne(query);
 
@@ -53,26 +53,31 @@ async function getMovie(id) {
   return movie;
 }
 
-// create movie
-// Example movie object:
-/* 
-{ 
-  title: "Das Geheimnis von Altura",
-  year: 2024,
-  length: "120 Minuten"
-} 
-*/
 async function createMovie(movie) {
-  movie.poster = "/images/placeholder.jpg"; // default poster
+  movie.poster = "/images/placeholder.jpg"; // Platzhalterbild, falls keine URL angegeben ist
+  movie.actors = []; // Leere Liste für Schauspieler
+  movie.watchlist = false; // Standardwert
+  try {
+      const collection = db.collection("movies");
+      const result = await collection.insertOne(movie);
+      return result.insertedId.toString(); // Rückgabe der Movie-ID
+  } catch (error) {
+      console.log(error.message);
+  }
+  return null;
+}
+
+async function createMovie(movie) {
+  movie.poster = "/images/placeholder.jpg"; // Default-Poster
   movie.actors = [];
   movie.watchlist = false;
+
   try {
-    const collection = db.collection("movies");
-    const result = await collection.insertOne(movie);
-    return result.insertedId.toString(); // convert ObjectId to String
+      const collection = db.collection("movies");
+      const result = await collection.insertOne(movie);
+      return result.insertedId.toString(); // ObjectId als String zurückgeben
   } catch (error) {
-    // TODO: errorhandling
-    console.log(error.message);
+      console.log(error.message);
   }
   return null;
 }
