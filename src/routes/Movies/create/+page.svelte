@@ -4,7 +4,7 @@
 </script>
 
 <div class="container mt-2">
-    <a href="/novies" class="btn btn-link text-light mb-4">Back</a>
+    <a href="/movies" class="btn btn-link text-light mb-4">Back</a>
     <h2 class="mb-4">Add a Movie</h2>
     <form method="POST" action="?/create" class="needs-validation">
         <div class="mb-3">

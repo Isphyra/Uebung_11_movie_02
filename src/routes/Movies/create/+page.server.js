@@ -7,9 +7,9 @@ export const actions = {
 
         // Daten aus dem Formular extrahieren
         const movie = {
-            itle: formData.get('name'), 
-            Year: parseInt(formData.get('year'), 10),
-            Duration: `${formData.get('duration')} Minuten`, 
+            title: formData.get('name'), 
+            year: parseInt(formData.get('year'), 10),
+            duration: `${formData.get('duration')} Minuten`, 
         };
 
         const id = await db.createMovie(movie);
